@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/screens/call_screen.dart';
 import 'package:whatsapp_clone/screens/chats_screen.dart';
+import 'package:whatsapp_clone/screens/status_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -29,11 +31,7 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
           body: TabBarView(
-            children: [
-              ChatsScreen(),
-              const Icon(Icons.directions_transit, size: 350),
-              const Icon(Icons.directions_car, size: 350),
-            ],
+            children: [ChatsScreen(), StatusSCreen(), CallScreen()],
           ),
         ),
       ),
