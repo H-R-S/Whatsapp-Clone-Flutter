@@ -3,24 +3,25 @@ import 'package:flutter/material.dart';
 class MyAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const SliverAppBar(
-      toolbarHeight: 49,
+    return SliverAppBar(
+      toolbarHeight: 50,
       pinned: true,
       expandedHeight: 110,
-      backgroundColor: Color(0xff128c7e),
-      title: Text('WhatssApp'),
+      backgroundColor: const Color(0xff128c7e),
+      title: const Text('WhatssApp'),
       actions: [
-        Icon(Icons.search),
+        IconButton(icon: const Icon(Icons.search), onPressed: () {}),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10),
-          child: Icon(Icons.more_vert),
-        )
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: IconButton(
+                icon: const Icon(Icons.more_vert), onPressed: () {})),
       ],
-      bottom: PreferredSize(
-        preferredSize: Size.fromHeight(0),
+      bottom: const PreferredSize(
+        preferredSize: Size.fromHeight(-2),
         child: TabBar(
           indicatorColor: Colors.white,
           tabs: [
+            Tab(icon: Icon(Icons.camera_alt_rounded)),
             Tab(text: "CHATS"),
             Tab(text: "STATUS"),
             Tab(text: "CALLS"),
