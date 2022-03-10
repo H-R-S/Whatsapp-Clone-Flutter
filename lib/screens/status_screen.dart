@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/chat_container.dart';
+import 'camera_screen.dart';
 
 class StatusSCreen extends StatelessWidget {
   @override
@@ -7,7 +8,10 @@ class StatusSCreen extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         ChatContainer(
-          onTap: () {},
+          onTap: () {
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) => CameraScreen()));
+          },
           image: "assets/images/my_image.jpg",
           name: "My Status",
           currentMessage: "Tap to add status update",
