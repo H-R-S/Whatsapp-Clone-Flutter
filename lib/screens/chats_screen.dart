@@ -4,6 +4,8 @@ import '../data/user_data.dart';
 import '../widgets/chat_list.dart';
 
 class ChatsScreen extends StatelessWidget {
+  get index => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,7 +13,7 @@ class ChatsScreen extends StatelessWidget {
         leading: const BackButton(),
         backgroundColor: const Color(0xff128c7e),
         title: Text(
-          user_info[0]['name'].toString(),
+          user_info[1]['name'].toString(),
         ),
         centerTitle: false,
         actions: [
@@ -31,7 +33,7 @@ class ChatsScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Expanded(
+          const Expanded(
             child: ChatList(),
           ),
           TextField(
