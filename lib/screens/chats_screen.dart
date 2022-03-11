@@ -1,89 +1,80 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/widgets/chat_container.dart';
+import '../constants/style.dart';
+import '../data/user_data.dart';
+import '../widgets/chat_list.dart';
 
 class ChatsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
+    return Scaffold(
+      appBar: AppBar(
+        leading: const BackButton(),
+        backgroundColor: const Color(0xff128c7e),
+        title: Text(
+          user_info[0]['name'].toString(),
+        ),
+        centerTitle: false,
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.video_call),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.call),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.more_vert),
+          ),
+        ],
+      ),
+      body: Column(
         children: [
-          ChatContainer(
-            onTap: () {},
-            image: "assets/logos/whatsapp_logo.png",
-            name: "Whatsapp",
-            currentMessage: "Welcome to Whatsapp clone",
-            isStatus: false,
-            isAddStatus: false,
-            isCall: false,
+          Expanded(
+            child: ChatList(),
           ),
-          ChatContainer(
-            onTap: () {},
-            image: "assets/images/my_image.jpg",
-            name: "Haris",
-            currentMessage: "Assalamualikum",
-            isStatus: false,
-            isAddStatus: false,
-            isCall: false,
-          ),
-          ChatContainer(
-            onTap: () {},
-            image: "null",
-            name: "Clone",
-            currentMessage:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-            isStatus: false,
-            isAddStatus: false,
-            isCall: false,
-          ),
-          ChatContainer(
-            onTap: () {},
-            image: "null",
-            name: "Flutter",
-            currentMessage:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-            isStatus: false,
-            isAddStatus: false,
-            isCall: false,
-          ),
-          ChatContainer(
-            onTap: () {},
-            image: "null",
-            name: "Clone",
-            currentMessage:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-            isStatus: false,
-            isAddStatus: false,
-            isCall: false,
-          ),
-          ChatContainer(
-            onTap: () {},
-            image: "null",
-            name: "Flutter",
-            currentMessage:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-            isStatus: false,
-            isAddStatus: false,
-            isCall: false,
-          ),
-          ChatContainer(
-            onTap: () {},
-            image: "null",
-            name: "Clone",
-            currentMessage:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-            isStatus: false,
-            isAddStatus: false,
-            isCall: false,
-          ),
-          ChatContainer(
-            onTap: () {},
-            image: "null",
-            name: "Flutter",
-            currentMessage:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-            isStatus: false,
-            isAddStatus: false,
-            isCall: false,
+          TextField(
+            decoration: InputDecoration(
+              filled: true,
+              fillColor: mobileChatBoxColor,
+              prefixIcon: const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.0),
+                child: Icon(
+                  Icons.emoji_emotions,
+                  color: Colors.grey,
+                ),
+              ),
+              suffixIcon: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: const [
+                    Icon(
+                      Icons.camera_alt,
+                      color: Colors.grey,
+                    ),
+                    Icon(
+                      Icons.attach_file,
+                      color: Colors.grey,
+                    ),
+                    Icon(
+                      Icons.money,
+                      color: Colors.grey,
+                    ),
+                  ],
+                ),
+              ),
+              hintText: 'Type a message!',
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(20.0),
+                borderSide: const BorderSide(
+                  width: 0,
+                  style: BorderStyle.none,
+                ),
+              ),
+              contentPadding: const EdgeInsets.all(10),
+            ),
           ),
         ],
       ),
