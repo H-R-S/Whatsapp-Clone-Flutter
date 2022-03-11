@@ -4,7 +4,6 @@ import '../data/user_data.dart';
 import '../widgets/chat_list.dart';
 
 class ChatsScreen extends StatelessWidget {
-  get index => null;
 
   @override
   Widget build(BuildContext context) {
@@ -36,46 +35,45 @@ class ChatsScreen extends StatelessWidget {
           const Expanded(
             child: ChatList(),
           ),
-          TextField(
-            decoration: InputDecoration(
-              filled: true,
-              fillColor: mobileChatBoxColor,
-              prefixIcon: const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.0),
-                child: Icon(
-                  Icons.emoji_emotions,
-                  color: Colors.grey,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            child: TextField(
+              decoration: InputDecoration(
+                filled: true,
+                fillColor: mobileChatBoxColor,
+                prefixIcon: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Icon(
+                    Icons.emoji_emotions_outlined,
+                    color: Colors.grey,
+                  ),
                 ),
-              ),
-              suffixIcon: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: const [
-                    Icon(
-                      Icons.camera_alt,
-                      color: Colors.grey,
-                    ),
-                    Icon(
-                      Icons.attach_file,
-                      color: Colors.grey,
-                    ),
-                    Icon(
-                      Icons.money,
-                      color: Colors.grey,
-                    ),
-                  ],
+                suffixIcon: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: const [
+                      Icon(
+                        Icons.camera_alt_outlined,
+                        color: Colors.grey,
+                      ),
+                      Icon(
+                        Icons.attach_file_outlined,
+                        color: Colors.grey,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              hintText: 'Type a message!',
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20.0),
-                borderSide: const BorderSide(
-                  width: 0,
-                  style: BorderStyle.none,
+                hintText: 'Type a message!',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                  borderSide: const BorderSide(
+                    width: 0,
+                    style: BorderStyle.none,
+                  ),
                 ),
+                contentPadding: const EdgeInsets.all(10),
               ),
-              contentPadding: const EdgeInsets.all(10),
             ),
           ),
         ],
