@@ -9,7 +9,7 @@ class StatusSCreen extends StatelessWidget {
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         ChatContainer(
           onTap: () {
-            Navigator.pushReplacement(context,
+            Navigator.push(context,
                 MaterialPageRoute(builder: (context) => CameraScreen()));
           },
           image: "assets/images/my_image.jpg",
