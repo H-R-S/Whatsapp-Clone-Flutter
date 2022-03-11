@@ -7,6 +7,5 @@ const messageColor = Color(0xffd9fdd3);
 const senderMessageColor = Colors.white;
 const tabColor = Color(0xff128c7e);
 const searchBarColor = Color.fromRGBO(50, 55, 57, 1);
-const dividerColor = Color.fromRGBO(37, 45, 50, 1);
 const chatBarMessage = Color.fromRGBO(30, 36, 40, 1);
-const mobileChatBoxColor = Color.fromRGBO(31, 44, 52, 1);
+const mobileChatBoxColor = Colors.black12;
