@@ -1,16 +1,15 @@
 # whatsapp_clone
 
-A new Flutter project.
+A Simple WhatsApp Clone made with Flutter.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## UI ScreenShots:
+#### Chat List Screen:
+![chat_list_screen_shot](https://github.com/H-R-S/Whatsapp-Clone-Flutter/blob/main/screen_shots/chat_list_screen.JPG)
+#### Chat Screen:
+![chat_screen_shot](https://github.com/H-R-S/Whatsapp-Clone-Flutter/blob/main/screen_shots/chat_screen.JPG)
+#### Status Screen:
+![status_screen_shot](https://github.com/H-R-S/Whatsapp-Clone-Flutter/blob/main/screen_shots/status_screen.JPG)
+#### Call Screen:
+![call_screen_shot](https://github.com/H-R-S/Whatsapp-Clone-Flutter/blob/main/screen_shots/call_screen.JPG)
+#### Camera Screen:
+![camera_screen_shot](https://github.com/H-R-S/Whatsapp-Clone-Flutter/blob/main/screen_shots/camera_screen_permission.JPG)
